@@ -1,35 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      font-family: 'Kumbh Sans';
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+
+    .container {
+      background-color: hsl(185, 75%, 39%)
+    }
+
+    .card {
+      background-color: white;
+      width: 350px;
+      height: auto;
+      margin: auto;
+      box-shadow: 0 0 99px 1px rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+
+    .flex-container-stats {
+      display: flex;
+    }
+
+    .item-stats {
+      flex-grow: 1;
+    }
+
+    .user-info {
+      text-align: center;
+    }
+
+    .user-info img{
+      border-radius: 50%;
+      border: 5px solid white;
+    }
+
+    .user-info > #name {
+      font-weight: 700;
+    }
+
+    .user-info > div > #age, .user-info > #country{
+      font-weight: 400;
+    }
+
   </style>
 </head>
+
 <body>
-  Victor Crest
-  26
-  London
+  <div class="container">
+    <div class="card">
+      <img src="images/bg-pattern-card.svg" alt="">
+      
 
-  80K
-  Followers
+      <div class="user-info">
+        <img src="images/image-victor.jpg" alt="">
+        <div id="name">Victor Crest <span id="age">26</span> </div>
+        <div id="country">London</div>
+      </div>
 
-  803K
-  Likes
 
-  1.4K
-  Photos
+      <hr>
+
+      <div class="flex-container-stats">
+        <div class="item-stats">
+          80K
+          Followers
+        </div>
+        <div class="item-stats">
+          803K
+          Likes
+        </div>
+        <div class="item-stats">
+          1.4K
+          Photos
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">IMAM FARIED | IFA</a>.
   </div>
 </body>
+
 </html>
