@@ -28,10 +28,14 @@
 
 
     .container {
-      background-color: hsl(185, 75%, 39%)
+      background-color: hsl(185, 75%, 39%);
+      height: 800px;
+      display: flex;
+      justify-content: center;
     }
 
     .card {
+      position: relative;
       background-color: white;
       width: 350px;
       height: auto;
@@ -49,16 +53,19 @@
     }
 
     .user-info {
+      position: relative;
+      bottom: 4rem;
       text-align: center;
     }
 
-    .user-info img{
+    .user-info > #user-image{
       border-radius: 50%;
       border: 5px solid white;
     }
 
     .user-info > #name {
       font-weight: 700;
+      line-height: 3rem;
     }
 
     .user-info > div > #age, .user-info > #country{
@@ -71,30 +78,26 @@
 <body>
   <div class="container">
     <div class="card">
-      <img src="images/bg-pattern-card.svg" alt="">
+      <img  src="images/bg-pattern-card.svg" alt="">
       
-
       <div class="user-info">
-        <img src="images/image-victor.jpg" alt="">
+        <img id="user-image" src="images/image-victor.jpg" alt="">
         <div id="name">Victor Crest <span id="age">26</span> </div>
         <div id="country">London</div>
-      </div>
-
-
-      <hr>
-
-      <div class="flex-container-stats">
-        <div class="item-stats">
-          80K
-          Followers
-        </div>
-        <div class="item-stats">
-          803K
-          Likes
-        </div>
-        <div class="item-stats">
-          1.4K
-          Photos
+        <hr>
+        <div class="flex-container-stats">
+          <div class="item-stats">
+            80K
+            Followers
+          </div>
+          <div class="item-stats">
+            803K
+            Likes
+          </div>
+          <div class="item-stats">
+            1.4K
+            Photos
+          </div>
         </div>
       </div>
     </div>
