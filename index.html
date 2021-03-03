@@ -12,7 +12,6 @@
   <title>Frontend Mentor | Profile card component</title>
 
   <style>
-
     body {
       background-color: hsl(185, 75%, 39%);
       font-family: 'Kumbh Sans';
@@ -27,7 +26,7 @@
       justify-content: center;
     }
 
-    .attribution{
+    .attribution {
       margin: 0 auto;
     }
 
@@ -40,24 +39,32 @@
       z-index: 2;
     }
 
-    .background{
-      
+    .background {
+      background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: -5% -750%, right 400px;
+      background-attachment: fixed, fixed;
     }
 
-    #pattern-top{
+    @media screen and (max-width: 1000px){
+
+    }
+
+    #pattern-top {
       width: 45%;
       position: fixed;
       bottom: 50%;
     }
 
-    #pattern-bottom{
+    #pattern-bottom {
       width: 45%;
       position: fixed;
       right: 0;
       top: 25%;
     }
 
-    .card > #pattern-card {
+    .card>#pattern-card {
       width: 100%;
       border-radius: 10px 10px 0 0;
     }
@@ -79,22 +86,23 @@
       text-align: center;
     }
 
-    .user-info > #user-image{
+    .user-info>#user-image {
       border-radius: 50%;
       border: 5px solid white;
     }
 
-    .user-info > #name {
+    .user-info>#name {
       font-size: 18px;
       font-weight: 700;
       line-height: 3rem;
     }
 
-    .user-info > div > #age, .user-info > #country{
+    .user-info>div>#age,
+    .user-info>#country {
       font-weight: 400;
     }
 
-    .user-stats{
+    .user-stats {
       font-size: 18px;
       font-weight: 700;
       line-height: 2rem;
@@ -105,7 +113,7 @@
       font-size: small;
     }
 
-    hr{
+    hr {
       border: solid hsl(0, 0%, 59%) 1px;
       border-bottom: none;
     }
@@ -113,39 +121,39 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="background">
-      <img id="pattern-top" src="images/bg-pattern-top.svg" alt="">
-      <img id="pattern-bottom" src="images/bg-pattern-bottom.svg" alt="">
-    </div>
-    <div class="card">
-      <img id="pattern-card" src="images/bg-pattern-card.svg" alt="">
-      
-      <div class="user-info">
-        <img id="user-image" src="images/image-victor.jpg" alt="">
-        <div id="name">Victor Crest <span id="age">26</span> </div>
-        <div id="country">London</div>
-        <hr>
-        <div class="flex-container-stats">
-          <div class="item-stats">
-            <div class="user-stats">80K</div>
-            <div class="title-user-stats">Followers</div>
-          </div>
-          <div class="item-stats">
-            <div class="user-stats">803K</div>
-            <div class="title-user-stats">Likes</div>
-          </div>
-          <div class="item-stats">
-            <div class="user-stats">1.4K</div>
-            <div class="title-user-stats">Photos</div>
+  <div class="background">
+    
+    <div class="container">
+      <div class="card">
+        <img id="pattern-card" src="images/bg-pattern-card.svg" alt="">
+  
+        <div class="user-info">
+          <img id="user-image" src="images/image-victor.jpg" alt="">
+          <div id="name">Victor Crest <span id="age">26</span> </div>
+          <div id="country">London</div>
+          <hr>
+          <div class="flex-container-stats">
+            <div class="item-stats">
+              <div class="user-stats">80K</div>
+              <div class="title-user-stats">Followers</div>
+            </div>
+            <div class="item-stats">
+              <div class="user-stats">803K</div>
+              <div class="title-user-stats">Likes</div>
+            </div>
+            <div class="item-stats">
+              <div class="user-stats">1.4K</div>
+              <div class="title-user-stats">Photos</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/imamfh24" target="_blank">IMAM FARIED | IFA</a>.
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/imamfh24" target="_blank">IMAM FARIED | IFA</a>.
+      </div>
     </div>
   </div>
 </body>
+
 </html>
