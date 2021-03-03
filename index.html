@@ -13,35 +13,55 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+
     body {
       font-family: 'Kumbh Sans';
+      margin: 0;
     }
-
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
 
     .container {
       background-color: hsl(185, 75%, 39%);
       height: 800px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
     }
 
+    .attribution{
+      margin: 0 auto;
+    }
+
     .card {
-      position: relative;
       background-color: white;
-      width: 350px;
-      height: auto;
+      min-width: 375px;
       margin: auto;
       box-shadow: 0 0 99px 1px rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
+      border-radius: 10px;
+      z-index: 2;
+    }
+
+    .background{
+      position: absolute;
+    }
+
+    .background #pattern-top{
+      position: relative;
+      width: 75%;
+      height: auto;
+      
+    }
+
+    .background #pattern-bottom{
+      position: inherit;
+      width: 75%;
+      height: auto;
+      left: 600px;
+      top: 300px;
+    }
+
+    .card > #pattern-card {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
     }
 
     .flex-container-stats {
@@ -50,11 +70,14 @@
 
     .item-stats {
       flex-grow: 1;
+      flex-basis: 25%;
+      padding: 15px;
     }
 
     .user-info {
       position: relative;
       bottom: 4rem;
+      margin-bottom: -3rem;
       text-align: center;
     }
 
@@ -64,6 +87,7 @@
     }
 
     .user-info > #name {
+      font-size: 18px;
       font-weight: 700;
       line-height: 3rem;
     }
@@ -72,13 +96,32 @@
       font-weight: 400;
     }
 
+    .user-stats{
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 2rem;
+    }
+
+    .title-user-stats {
+      color: hsl(0, 0%, 59%);
+      font-size: small;
+    }
+
+    hr{
+      border: solid hsl(0, 0%, 59%) 1px;
+      border-bottom: none;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
+    <div class="background">
+      <img id="pattern-top" src="images/bg-pattern-top.svg" alt="">
+      <img id="pattern-bottom" src="images/bg-pattern-bottom.svg" alt="">
+    </div>
     <div class="card">
-      <img  src="images/bg-pattern-card.svg" alt="">
+      <img id="pattern-card" src="images/bg-pattern-card.svg" alt="">
       
       <div class="user-info">
         <img id="user-image" src="images/image-victor.jpg" alt="">
@@ -87,25 +130,24 @@
         <hr>
         <div class="flex-container-stats">
           <div class="item-stats">
-            80K
-            Followers
+            <div class="user-stats">80K</div>
+            <div class="title-user-stats">Followers</div>
           </div>
           <div class="item-stats">
-            803K
-            Likes
+            <div class="user-stats">803K</div>
+            <div class="title-user-stats">Likes</div>
           </div>
           <div class="item-stats">
-            1.4K
-            Photos
+            <div class="user-stats">1.4K</div>
+            <div class="title-user-stats">Photos</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">IMAM FARIED | IFA</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">IMAM FARIED | IFA</a>.
+    </div>
   </div>
 </body>
-
 </html>
