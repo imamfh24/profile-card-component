@@ -11,17 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
 
     body {
+      background-color: hsl(185, 75%, 39%);
       font-family: 'Kumbh Sans';
       margin: 0;
     }
 
     .container {
-      background-color: hsl(185, 75%, 39%);
-      height: 800px;
+      min-width: 375px;
+      min-height: 810px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -41,22 +41,20 @@
     }
 
     .background{
-      position: absolute;
-    }
-
-    .background #pattern-top{
-      position: relative;
-      width: 75%;
-      height: auto;
       
     }
 
-    .background #pattern-bottom{
-      position: inherit;
-      width: 75%;
-      height: auto;
-      left: 600px;
-      top: 300px;
+    #pattern-top{
+      width: 45%;
+      position: fixed;
+      bottom: 50%;
+    }
+
+    #pattern-bottom{
+      width: 45%;
+      position: fixed;
+      right: 0;
+      top: 25%;
     }
 
     .card > #pattern-card {
@@ -146,7 +144,7 @@
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">IMAM FARIED | IFA</a>.
+      Coded by <a href="https://github.com/imamfh24" target="_blank">IMAM FARIED | IFA</a>.
     </div>
   </div>
 </body>
