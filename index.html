@@ -13,13 +13,14 @@
 
   <style>
     body {
+      min-width: 375px;
       background-color: hsl(185, 75%, 39%);
       font-family: 'Kumbh Sans';
       margin: 0;
     }
 
     .container {
-      min-width: 375px;
+
       min-height: 810px;
       display: flex;
       flex-direction: column;
@@ -43,25 +44,15 @@
       background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
       background-size: 50%;
       background-repeat: no-repeat;
-      background-position: -5% -750%, right 400px;
-      background-attachment: fixed, fixed;
+      background-position: left -750%, right 750%;
+      background-attachment: fixed;
     }
 
-    @media screen and (max-width: 1000px){
-
-    }
-
-    #pattern-top {
-      width: 45%;
-      position: fixed;
-      bottom: 50%;
-    }
-
-    #pattern-bottom {
-      width: 45%;
-      position: fixed;
-      right: 0;
-      top: 25%;
+    @media screen and (max-width: 375px) {
+      .background {
+        background-size: 100%;
+        background-position: -200px top, 200px bottom;
+      }
     }
 
     .card>#pattern-card {
@@ -122,11 +113,10 @@
 
 <body>
   <div class="background">
-    
     <div class="container">
       <div class="card">
         <img id="pattern-card" src="images/bg-pattern-card.svg" alt="">
-  
+
         <div class="user-info">
           <img id="user-image" src="images/image-victor.jpg" alt="">
           <div id="name">Victor Crest <span id="age">26</span> </div>
